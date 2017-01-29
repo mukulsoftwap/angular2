@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     text-align: center;
 }
@@ -24,4 +25,32 @@ ul > li{
 }
 span{
     float: right;
+=======
+body{
+    text-align: center;
+}
+input{
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    height: 30px;
+    padding:5px;
+}
+button{
+    background: gray;
+    border: 1px solid #000;
+    color: #fff;
+    padding:12px;
+    border-radius: 3px;
+}
+ul > li{
+    padding: 10px;
+    width: 250px;
+    margin:2px;
+    background: #ccc;
+    color: #000;
+}
+span{
+    float: right;
+>>>>>>> fe2851ceadd54888df3c57d3103f3808fb5506e7
 }
