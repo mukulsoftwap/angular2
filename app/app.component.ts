@@ -18,6 +18,10 @@ export class AppComponent implements OnInit{
     this.getTodos();
   }
 
+  addTodo(){
+    this.todos.push(this.todo);
+  }
+
   deleteTodo(val:number){
     this.todos.splice(val,1);
   }
