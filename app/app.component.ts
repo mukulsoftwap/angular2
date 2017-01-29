@@ -12,12 +12,14 @@ export class AppComponent implements OnInit{
   todo = '';
   todos = new Array;
 
-  constructor(private todoService : TodoService){
-
-  }
+  constructor(private todoService : TodoService){}
 
   ngOnInit(){
     this.getTodos();
+  }
+
+  deleteTodo(val:number){
+    this.todos.splice(val,1);
   }
 
   getTodos(){
