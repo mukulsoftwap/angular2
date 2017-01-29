@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 export class TodoService{
     constructor(private http : Http) {}
 
-    getTodo() {
-        return this.http.get('api/people.json').map(response => response.json());
+    todo() {
+        return this.http.get('../app/demo.json').map(response => response.json());
     }
 }
