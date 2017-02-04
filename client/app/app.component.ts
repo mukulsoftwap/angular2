@@ -19,16 +19,26 @@ export class AppComponent implements OnInit{
   }
 
   addTodo(){
-    this.todos.push(this.todo);
+    this.todoService.addTodo(this.todo).subscribe(
+      result => this.getTodos()
+    )
   }
 
-  deleteTodo(val:number){
-    this.todos.splice(val,1);
+  updateTodo(event:string,id:string){
+    this.todoService.updateTodo(event,id).subscribe(
+      result => this.getTodos()
+    )
+  }
+
+  deleteTodo(val:string){
+    this.todoService.deleteTodo(val).subscribe(
+      result => this.getTodos()
+    )
   }
 
   getTodos(){
-    this.todoService.todo().subscribe(
-      result => this.todos =result
-    )
+    this.todoService.getTodo().subscribe(
+        result => this.todos = result
+      );
   }
 }

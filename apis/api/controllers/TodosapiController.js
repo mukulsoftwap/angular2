@@ -6,6 +6,10 @@
  */
 
 module.exports = {
-	
+    upadteTodo : function(req,res){
+        Todoapis.update(req.body.id,{name : req.body.name}).exec(function(err, update){
+            res.json(update);
+        });
+    }
 };
 

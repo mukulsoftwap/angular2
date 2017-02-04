@@ -1,5 +1,5 @@
 <input type="text" [(ngModel)]="todo">
 <button type="button" (click)="addTodo()">Add Todo</button>
 <ul>
-    <li *ngFor="let val of todos let i = index">{{val.name}} <span (click)="deleteTodo(i)">Delete</span></li>
+    <li *ngFor="let val of todos"><input type=text value="{{val.name}}" (blur)="updateTodo($event.target.value,val.id)"> <span (click)="deleteTodo(val.id)">Delete</span> </li>
 </ul>
